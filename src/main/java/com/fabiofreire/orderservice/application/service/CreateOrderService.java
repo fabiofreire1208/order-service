@@ -8,6 +8,7 @@ import com.fabiofreire.orderservice.domain.model.Order;
 import com.fabiofreire.orderservice.domain.model.OrderItem;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -19,6 +20,7 @@ public class CreateOrderService implements CreateOrderUseCase {
     private final OrderRepositoryPort orderRepository;
     private final OutboxEventPort outboxEventPort;
 
+    @Transactional
     @Override
     public CreateOrderResult execute(CreateOrderCommand command) {
         Optional<Order> existing = orderRepository.findByExternalOrderId(command.externalOrderId());
