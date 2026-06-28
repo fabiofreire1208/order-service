@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fabiofreire.orderservice.application.port.in.CreateOrderUseCase;
 import com.fabiofreire.orderservice.application.port.in.GetOrderUseCase;
 import com.fabiofreire.orderservice.application.port.in.ListOrdersUseCase;
-import com.fabiofreire.orderservice.application.service.CreateOrderResult;
+import com.fabiofreire.orderservice.application.port.in.CreateOrderResult;
 import com.fabiofreire.orderservice.domain.exception.OrderNotFoundException;
 import com.fabiofreire.orderservice.domain.model.Order;
 import com.fabiofreire.orderservice.domain.model.OrderItem;

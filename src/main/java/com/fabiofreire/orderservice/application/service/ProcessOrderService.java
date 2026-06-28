@@ -7,6 +7,7 @@ import com.fabiofreire.orderservice.domain.model.OrderStatus;
 import com.fabiofreire.orderservice.domain.exception.OrderNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.UUID;
 
@@ -16,6 +17,7 @@ public class ProcessOrderService implements ProcessOrderUseCase {
 
     private final OrderRepositoryPort orderRepository;
 
+    @Transactional
     @Override
     public void execute(UUID orderId) {
         Order order = orderRepository.findById(orderId)

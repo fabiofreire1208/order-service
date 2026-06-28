@@ -3,7 +3,7 @@ package com.fabiofreire.orderservice.infrastructure.adapter.in.web;
 import com.fabiofreire.orderservice.application.port.in.CreateOrderUseCase;
 import com.fabiofreire.orderservice.application.port.in.GetOrderUseCase;
 import com.fabiofreire.orderservice.application.port.in.ListOrdersUseCase;
-import com.fabiofreire.orderservice.application.service.CreateOrderResult;
+import com.fabiofreire.orderservice.application.port.in.CreateOrderResult;
 import com.fabiofreire.orderservice.domain.model.Order;
 import com.fabiofreire.orderservice.domain.model.OrderStatus;
 import com.fabiofreire.orderservice.infrastructure.adapter.in.web.dto.request.CreateOrderRequest;

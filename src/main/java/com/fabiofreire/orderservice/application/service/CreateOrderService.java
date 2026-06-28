@@ -1,6 +1,7 @@
 package com.fabiofreire.orderservice.application.service;
 
 import com.fabiofreire.orderservice.application.command.CreateOrderCommand;
+import com.fabiofreire.orderservice.application.port.in.CreateOrderResult;
 import com.fabiofreire.orderservice.application.port.in.CreateOrderUseCase;
 import com.fabiofreire.orderservice.application.port.out.OrderRepositoryPort;
 import com.fabiofreire.orderservice.application.port.out.OutboxEventPort;

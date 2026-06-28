@@ -1,4 +1,4 @@
-package com.fabiofreire.orderservice.application.service;
+package com.fabiofreire.orderservice.application.port.in;
 
 import com.fabiofreire.orderservice.domain.model.Order;
 
