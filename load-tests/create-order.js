@@ -9,6 +9,10 @@ export const options = {
     { duration: '1m', target: 10 },  // hold the load
     { duration: '30s', target: 0 },  // ramp down
   ],
+  thresholds: {
+    http_req_failed: ['rate<0.05'],    // less than 5% of requests may fail
+    http_req_duration: ['p(95)<1000'], // 95% of requests under 1000 ms
+  },
 };
 
 function uniqueExternalOrderId() {
