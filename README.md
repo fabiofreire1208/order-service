@@ -92,6 +92,7 @@ Dependencies always point inward. The Domain knows nothing about Spring, JPA, Ra
 | SpringDoc OpenAPI | API documentation |
 | Docker Compose | Local environment |
 | JUnit 5 + Mockito + MockMvc | Testing |
+| Grafana k6 | Load testing |
 
 ---
 

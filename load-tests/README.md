@@ -66,20 +66,20 @@ No installation is required if you run k6 through Docker (see below).
 
 ## Execution
 
-Run any script from the `load-tests` directory.
+Run any script from the project root.
 
 ### Using a local k6
 
 ```bash
-k6 run create-order.js
-k6 run get-order.js
-k6 run mixed-flow.js
+k6 run load-tests/create-order.js
+k6 run load-tests/get-order.js
+k6 run load-tests/mixed-flow.js
 ```
 
 ### Using Docker
 
 ```bash
-docker run --rm -i grafana/k6 run - <create-order.js
+docker run --rm -i grafana/k6 run - <load-tests/create-order.js
 ```
 
 > On Linux, the container reaches the host via `http://localhost:8080` only when
@@ -88,7 +88,7 @@ docker run --rm -i grafana/k6 run - <create-order.js
 >
 > ```bash
 > docker run --rm -i -e BASE_URL=http://host.docker.internal:8080 \
->   grafana/k6 run - <create-order.js
+>   grafana/k6 run - <load-tests/create-order.js
 > ```
 
 ---
@@ -103,7 +103,7 @@ docker run --rm -i grafana/k6 run - <create-order.js
 Example:
 
 ```bash
-k6 run -e BASE_URL=http://localhost:8080 -e PROCESSING_WAIT_SECONDS=5 mixed-flow.js
+k6 run -e BASE_URL=http://localhost:8080 -e PROCESSING_WAIT_SECONDS=5 load-tests/mixed-flow.js
 ```
 
 ---
